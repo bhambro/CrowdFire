@@ -2,6 +2,9 @@ package com.bth.models;
 
 import java.util.Date;
 
+/*
+ * This class can't be mapped to a data entity for now because it contains Spatial data types
+ */
 public class Location {
 	
 	private Long locationId;

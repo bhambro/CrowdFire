@@ -2,12 +2,27 @@ package com.bth.models;
 
 import java.util.Date;
 
+import com.bth.annotations.SQLColumn;
+import com.bth.annotations.SQLEntity;
+import com.bth.annotations.SQLKey;
+
+@SQLEntity(tableName = "Account")
 public class Account {
 	
+	@SQLColumn(name = "AccountId")
+	@SQLKey(generated = false)
 	private Long accountId;
+	
+	@SQLColumn(name = "EmailAddress")
 	private String emailAddress;
+	
+	@SQLColumn(name = "State")
 	private int state;
+	
+	@SQLColumn(name = "CreateDate")
 	private Date createDate;
+	
+	@SQLColumn(name = "AmendDate")
 	private Date amendDate;
 	
 	public Long getAccountId() {

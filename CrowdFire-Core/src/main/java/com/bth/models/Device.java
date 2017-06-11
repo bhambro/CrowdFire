@@ -2,13 +2,30 @@ package com.bth.models;
 
 import java.util.Date;
 
+import com.bth.annotations.SQLColumn;
+import com.bth.annotations.SQLEntity;
+import com.bth.annotations.SQLKey;
+
+@SQLEntity(tableName = "Device")
 public class Device {
 	
+	@SQLColumn(name = "DeviceId")
+	@SQLKey(generated = true)
 	private Long deviceId;
+	
+	@SQLColumn(name = "AccountId")
 	private Long accountId;
+	
+	@SQLColumn(name = "Platform")
 	private int platform;
+	
+	@SQLColumn(name = "FirebaseKey")
 	private String firebaseKey;
+	
+	@SQLColumn(name = "CreateDate")
 	private Date createDate;
+	
+	@SQLColumn(name = "AmendDate")
 	private Date amendDate;
 	
 	public Long getDeviceId() {
